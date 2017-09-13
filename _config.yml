@@ -1,0 +1,15 @@
+title: Tapsafe
+author: ""
+email: b+tapsafe@zi.is
+description: >
+    Transparent, secure; browser to mobile TOTP.
+baseurl: ""
+url: "https://tapsafe.github.io"
+github_username:  BarnabyShearer
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+permalink: /:categories/:title/
