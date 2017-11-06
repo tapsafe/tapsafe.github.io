@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Privacy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Transparent, secure; browser to mobile TOTP.">
+        <link rel="stylesheet" href="../main.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+        <link rel="manifest" href="../manifest.json" />
+        <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#bdc1ff" />
+        <meta name="theme-color" content="#bdc1ff" />
+    </head>
+    <body>
+        <header>
+            <h1><img src="../tapsafe.svg" alt="" /> Tapsafe</h1>
+            <nav>
+                <a href="../">Home</a>
+                <a class="active" href="../privacy/">Privacy</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Privacy</h1>
+            <p>We value personal privacy very highly. This system has been designed to minimize information disclosure. Please review the source code to verify we have stuck to this commitment.</p>
+<h1>Tapsafe.github.io Website</h1>
+<p>The sites functionality relies on storing a Web Push subscription from your paired Mobile. This is stored in LocalStorage and can be inspected with your Browser’s built in tools. No Cookies or other deliberate tracking methods are employed.</p>
+<p>This page is built using <a href="https://www.getlektor.com/">Lektor</a> and makes significant use of JavaScript libraries. As much as feasible we have verified these libraries are well behaved in-line with the spirit of this policy. (Please raise <a href="https://github.com/tapsafe/tapsafe.github.io/issues">Issues</a> if you feel we have missed anything.)</p>
+<p>This website is served over SSL, courtesy of Github Pages and their CDN. View their <a href="https://github.com/site/privacy">privacy policy</a>. This does raise the possibility of Github replacing or altering these pages; however this seemed more transparent then asking you to trust a server fully under my control. You are encouraged to host these pages yourself.</p>
+<p>Web Push is provided by your Browser which controls its privacy. All messages sent are encrypted with private keys which never leave your Browser and Mobile. Browser vendors relay the messages centrally, tracking timing and addressing for the service to work.</p>
+<h1>Tapsafe Browser Extension</h1>
+<p>The extension itself does not collect or transmit tracking information. By default it uses your Browser’s auto-update mechanism. Browser vendors do track some usage information from these update checks.</p>
+<p>Clicking the extensions button transmits the host-name of the page in the currently active tab to the local JavaScript loaded from tapsafe.github.io. The details of the websites are stored in the URL #fragment so they are not sent with HTTP requests.</p>
+<h1>Tapsafe Mobile App</h1>
+<p>The App is developed using many libraries and the functionality of the mobile OS. As much as feasible we have verified these libraries are well behaved in-line with the spirit of this policy. (Please raise Issues if you feel we have missed anything.)</p>
+<p>The App stores your Browser’s Web Push subscription to taspsafe.github.io, and your TOTP secrets on your device. No advertising or deliberate tracking systems are included.</p>
+<p>The App is distributed via most popular appstores, with auto-updates enabled. Please refer to the privacy policies of the store you used.</p>
+<p>You are encouraged to build the application for yourself. The appstore versions are built in carefully audited environments and signed with our private keys.</p>
+
+        </article>
+        <footer>
+            <a href="https://Zi.iS/"><img src="../ziis.svg" alt="Zi.iS" height="50" /></a>
+        </foorter>
+    </body>
+</html>
+
