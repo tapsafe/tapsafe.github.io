@@ -9,8 +9,8 @@ script:
   - make lektor
   - lektor build
 env:
-    LEKTOR_DEPLOY_USERNAME: brs-bot-002
-    LEKTOR_DEPLOY_PASSWORD:
+  - LEKTOR_DEPLOY_USERNAME: brs-bot-002
+  - LEKTOR_DEPLOY_PASSWORD:
         secure: UCnaSEjalMfwunc0pfxn38gC6+UMqo/AOJrpMprr4qq8DNjAxazpRJinp658B6S8QRG+EKbA2hmcDNkxAKQfEIVxd4tYHA0qvmdu/PDBzRVb4cPXbX0uRvt+1N5SDp0+tpBe3kspRhd/FTY6W+e2V5A4ljJPsJZBnzeEACqdwvAMNzcqdNEVBlNDbNEgm8zynC/708ccZmE57VWcSa7wSWRyrGOtYtdbUuyu8nxsNjxb4hESaWe2+M0ynxJN1PDspxxksk5J2imgPz2BsBdFKerpT5qgxrWYeSsUdbuN302fwjT45je+0GH+wz+yIx3IBgu0aTaJxvQdHpWzeCdpHEBrrwvDnCwauy/jDBLncZq1kpQZISv4s06vy99l1w9H9gVJkuCA+ZYZPrsIqHxW+g/xU355Y0y2gbJOsp2qDvan9JLQHpmve23dCp4OWduHp7z+CI0fqG6Zt1ctUXLzK8L8PTU0IGyXBHivDBRG1a6YvD9btRqOiqQuiYtJGObwhxPFJQZebGZRmNA9KwJ72aYHdASY8mJ1dllRw7GoxEBWP06JYGs1W1wTaumNlqxTFkXGDb5Lg4mHIV6ns6WAyqqE0vh3BaJrXg+q2hrfvwDjxIghC1gbkPiMcVyFAJFyEEuC8ngobApQnFdJ7vLG+78CfvhOYN5LnK7Opj30jNg=
 deploy:
     provider: script
