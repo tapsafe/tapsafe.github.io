@@ -15,3 +15,5 @@ env:
 deploy:
     provider: script
     script: lektor deploy ghpages
+    on:
+        branch: lektor
