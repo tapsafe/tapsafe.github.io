@@ -1,19 +1,18 @@
 language: python
-python:
-    3.5
+python: 3.5
 cache:
   directories:
-    - $HOME/.cache/pip
-    - $HOME/.cache/lektor/builds
+  - "$HOME/.cache/pip"
+  - "$HOME/.cache/lektor/builds"
 script:
-  - make lektor
-  - lektor build
-env:
-  - LEKTOR_DEPLOY_USERNAME: brs-bot-002
-  - LEKTOR_DEPLOY_PASSWORD:
-        secure: UCnaSEjalMfwunc0pfxn38gC6+UMqo/AOJrpMprr4qq8DNjAxazpRJinp658B6S8QRG+EKbA2hmcDNkxAKQfEIVxd4tYHA0qvmdu/PDBzRVb4cPXbX0uRvt+1N5SDp0+tpBe3kspRhd/FTY6W+e2V5A4ljJPsJZBnzeEACqdwvAMNzcqdNEVBlNDbNEgm8zynC/708ccZmE57VWcSa7wSWRyrGOtYtdbUuyu8nxsNjxb4hESaWe2+M0ynxJN1PDspxxksk5J2imgPz2BsBdFKerpT5qgxrWYeSsUdbuN302fwjT45je+0GH+wz+yIx3IBgu0aTaJxvQdHpWzeCdpHEBrrwvDnCwauy/jDBLncZq1kpQZISv4s06vy99l1w9H9gVJkuCA+ZYZPrsIqHxW+g/xU355Y0y2gbJOsp2qDvan9JLQHpmve23dCp4OWduHp7z+CI0fqG6Zt1ctUXLzK8L8PTU0IGyXBHivDBRG1a6YvD9btRqOiqQuiYtJGObwhxPFJQZebGZRmNA9KwJ72aYHdASY8mJ1dllRw7GoxEBWP06JYGs1W1wTaumNlqxTFkXGDb5Lg4mHIV6ns6WAyqqE0vh3BaJrXg+q2hrfvwDjxIghC1gbkPiMcVyFAJFyEEuC8ngobApQnFdJ7vLG+78CfvhOYN5LnK7Opj30jNg=
+- make lektor
+- lektor build
 deploy:
-    provider: script
-    script: lektor deploy ghpages
-    on:
-        branch: lektor
+  provider: script
+  script: lektor deploy ghpages
+  on:
+    branch: lektor
+env:
+  global:
+  - secure: TKHsxxfLxE/K5NR7e7yqk92jT9naHtgcpjykFNfCDWV2vd9IGbWp+IwFvAbl2Pd0j59mH/9222+OnsKzR8fTJ+R4l3a2lDdfhnV5aIQOKhAqZvCUpZpuaodbK0Fey68zUX4W7+LwyerpGfUx0qDamiBr7aWZfl8jiK+Cbheo65I/0461752PuZGWfNANYM3WS26mdz22XhmYahRqGP/tpAhM19xwtTJhID2RaW0qPsSGJCJMPt2MyrjGTegKLj7vIm6DuzrAbIhvK5H4pNfWV8H43nb+wd/Bq784lCKNq4HXxW+ZsrpbZxNuyYVYOtoDu3Z8oVXGGPSA4Ft99Nzzjyvs7R9ZoDCcF74LzVtl7ex0MOBJjoL8jMsg+ZES/VJutS2xrNVKiGGyoFuxLN4liB1BGutUTeDvDAZ4xWgcy0V8cknJn3G8CcbT5xV48qsOfU90LsBMuj14Nfa43kTZgLUxclWZ19J5+7zoOlHvfJ6cYCUcVkQODsNmv2vsOw+dB+TOmsCDQf3X5HCdiyD31DoxSKfNJdGQLqELZRwgKOPdjZr0/PWHVjiLzBbT1M8oBcplQvozqAeWSdw7jIaZ19W/Cm48CIAV7lFMY+6L2jiGVNY7TclKTePxp7qZgNcZ0D2XCB7vKV8dEFFwKNDp0sXA1nofGSOUu0b6Wrp9PLQ=
+  - secure: N2gIKMBt4gLdEkdLO9BtMGdoN0Jb+WnJmfjT0DNAJfJHBTGxr4kNTUBKYHZDhamFgpEJKsy9fF+iYje+BkGdmsXE1EUTW2L+1rREB7un74rBTAquKNJFNosA1q9qKmw/r10ncNezpLLDP+7kVhu3Hsadfd3vdGBbWHq4+5lc9pymb7nKVa2yVHCN3xMydWXrE8213mFniYrbyUghZdHl+N/KLUrym7JBWUkC6uGsH22RXcod9uw4vthDY1y4BPIhS35PVQQho7w4WdXYY+fSMWUTQk7cW57mbVnY5t98PSLN0hCL65YfHacBP3WrRpTTeJgGiyEwpG49ZbNwg9pUroxQ6uB3DtLDZkxIeLuSoIvcaYoGEnuXxFUkXemoFmAS305V0WF6tZ1vWOCaccglBGDC3KlcipycJbnFcPN5C5tvBl4CtES36kFOKrjxvQSyXrBzcSwkUlJlJngXZXraO3B3eAxkXDupJRqJxLkbAsTir3u1LQoud8P391hxdGZ8bPWsD0CNdlgzoEaiFz6vTlR+k7T7D0/pPADp0+Z75KOA8V2YXzGBCdLY5D2LgqpUODjOChSR+IxDZA1W/j3gtYhXpJ3x6h9k7is0Wmv2wd6u9krv/6SNb3hsmMuiFImVK/WH7awTrci69ul8NU9wNglZVz7jSWg4lN+bwqjFCME=
