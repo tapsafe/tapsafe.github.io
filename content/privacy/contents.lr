@@ -1,0 +1,34 @@
+_model: page
+---
+title: Privacy
+---
+body:
+
+We value personal privacy very highly. This system has been designed to minimize information disclosure. Please review the source code to verify we have stuck to this commitment.
+
+# Tapsafe.github.io Website
+
+The sites functionality relies on storing a Web Push subscription from your paired Mobile. This is stored in LocalStorage and can be inspected with your Browser’s built in tools. No Cookies or other deliberate tracking methods are employed.
+
+This page is built using [Lektor](https://www.getlektor.com/) and makes significant use of JavaScript libraries. As much as feasible we have verified these libraries are well behaved in-line with the spirit of this policy. (Please raise [Issues](https://github.com/tapsafe/tapsafe.github.io/issues) if you feel we have missed anything.)
+
+This website is served over SSL, courtesy of Github Pages and their CDN. View their [privacy policy](https://github.com/site/privacy). This does raise the possibility of Github replacing or altering these pages; however this seemed more transparent then asking you to trust a server fully under my control. You are encouraged to host these pages yourself.
+
+Web Push is provided by your Browser which controls its privacy. All messages sent are encrypted with private keys which never leave your Browser and Mobile. Browser vendors relay the messages centrally, tracking timing and addressing for the service to work.
+
+# Tapsafe Browser Extension
+
+The extension itself does not collect or transmit tracking information. By default it uses your Browser’s auto-update mechanism. Browser vendors do track some usage information from these update checks.
+
+Clicking the extensions button transmits the host-name of the page in the currently active tab to the local JavaScript loaded from tapsafe.github.io. The details of the websites are stored in the URL #fragment so they are not sent with HTTP requests.
+
+# Tapsafe Mobile App
+
+The App is developed using many libraries and the functionality of the mobile OS. As much as feasible we have verified these libraries are well behaved in-line with the spirit of this policy. (Please raise Issues if you feel we have missed anything.)
+
+The App stores your Browser’s Web Push subscription to taspsafe.github.io, and your TOTP secrets on your device. No advertising or deliberate tracking systems are included.
+
+The App is distributed via most popular appstores, with auto-updates enabled. Please refer to the privacy policies of the store you used.
+
+You are encouraged to build the application for yourself. The appstore versions are built in carefully audited environments and signed with our private keys.
+

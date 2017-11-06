@@ -1,0 +1,8 @@
+[project]
+name = Tapsafe
+
+[packages]
+lektor-make = 0.1
+
+[servers.ghpages]
+target = ghpages+https://tapsafe/tapsafe.github.io

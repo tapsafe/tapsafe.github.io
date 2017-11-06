@@ -1,0 +1,68 @@
+/*! main.css v0.0.1 | MIT License | github.com/tapsafe/tapsafe.github.io */
+
+html {
+    overflow-y: scroll;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, input {
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1,h2,h3 {
+    font-weight: normal;
+}
+
+article {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (min-width: 550px) {
+    article {
+        width: 80%;
+    }
+}
+
+footer {
+    text-align: center;
+}
+header {
+    background-color: #adb1cf;
+    color: white;
+    text-align: right;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+header h1 {
+    float: left;
+}
+header h1 img {
+    height: 1em;
+    vertical-align: middle;
+}
+header nav a, header h1 {
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    margin: 0px;
+    padding: 0 15px;
+    min-width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    will-change: background-color;
+}
+header nav a:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+header nav a.active {
+    background: rgba(0,0,0,0.4);
+}
+
