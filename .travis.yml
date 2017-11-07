@@ -7,7 +7,7 @@ cache:
 script:
 - make lektor
 - lektor build
-- ./test.py
+- python3 ./test.py
 deploy:
   provider: script
   script: lektor deploy ghpages
