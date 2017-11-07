@@ -1,2 +1,2 @@
 git+https://github.com/mitsuhiko/python-inifile.git
-lektor
+git+https://github.com/lektor/lektor.git
