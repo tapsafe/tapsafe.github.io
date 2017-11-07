@@ -24,7 +24,7 @@ Clicking the extensions button transmits the host-name of the page in the curren
 
 # Tapsafe Mobile App
 
-The App is developed using many libraries and the functionality of the mobile OS. As much as feasible we have verified these libraries are well behaved in-line with the spirit of this policy. (Please raise Issues if you feel we have missed anything.)
+The App is developed using many libraries and the functionality of the mobile OS. As much as feasible we have verified these libraries are well behaved in-line with the spirit of this policy. (Please raise [Issues](https://github.com/tapsafe/tapsafe-app/issues) if you feel we have missed anything.)
 
 The App stores your Browser’s Web Push subscription to taspsafe.github.io, and your TOTP secrets on your device. No advertising or deliberate tracking systems are included.
 
