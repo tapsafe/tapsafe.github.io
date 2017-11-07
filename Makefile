@@ -10,7 +10,7 @@ node_modules/.bin/csso:
 	npm install csso-cli
 
 sc-4.4.9-linux/bin/sc:
-    curl https://saucelabs.com/downloads/sc-4.4.9-linux.tar.gz | tar xz
+	curl https://saucelabs.com/downloads/sc-4.4.9-linux.tar.gz | tar xz
 
 venv:
 	virtualenv -p python3 $@
@@ -25,3 +25,6 @@ tmp/normalize.css:
 
 assets/main.css: tmp/normalize.css src/main.css | node_modules/.bin/csso
 	cat $+ | ./node_modules/.bin/csso -o $@ -m $@.map
+
+test: sc-4.4.9-linux/bin/sc
+	./test.py

@@ -94,9 +94,28 @@ def tests(driver):
     if not "Tapsafe" in driver.title:
         raise Exception("Unable to load page!")
 
+def thread1_tests():
+    with get_driver("iOS", "Safari", "11.0", "portrait", "iPhone 8 Simulator") as driver:
+        tests(driver)
+
+def thread2_tests():
+    with get_driver("iOS", "Safari", "10.3", "portrait", "iPad Air 2 Simulator") as driver:
+        tests(driver)
+
+def thread3_tests():
+    with get_driver("Android", "Browser", "4.4", "portrait", "Samsung Galaxy S4 GoogleAPI Emulator") as driver:
+        tests(driver)
+
 def main():
     with ensure_source_connect():
         with server():
+            threads = [
+                threading.Thread(target=thread1_tests),
+                threading.Thread(target=thread2_tests),
+                threading.Thread(target=thread3_tests)
+            ]
+            for thread in threads:
+                thread.start()
             with get_driver("Windows 10", "MicrosoftEdge", "14.14393", "1280x960") as driver:
                 tests(driver)
             with get_driver("Windows 7", "internet explorer", "11.0", "1024x768") as driver:
@@ -107,13 +126,10 @@ def main():
                 tests(driver)
             with get_driver("Windows 10", "firefox", "52.0", "1600x1200") as driver:
                tests(driver)
-            with get_driver("iOS", "Safari", "11.0", "portrait", "iPhone 8 Simulator") as driver:
-                tests(driver)
-            with get_driver("iOS", "Safari", "10.3", "portrait", "iPad Air 2 Simulator") as driver:
-                tests(driver)
-            with get_driver("Android", "Browser", "4.4", "portrait", "Samsung Galaxy S4 GoogleAPI Emulator") as driver:
-                tests(driver)
-
+            while any([thread.isAlive() for thread in threads]):
+                for thread in threads:
+                    thread.join(10)
+                print("Waiting on threads...", flush=True)
 
 if __name__ == "__main__":
     main()
