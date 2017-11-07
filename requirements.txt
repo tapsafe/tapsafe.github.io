@@ -1,2 +1,4 @@
 git+https://github.com/mitsuhiko/python-inifile.git
 git+https://github.com/lektor/lektor.git
+selenium
+Appium-Python-Client
