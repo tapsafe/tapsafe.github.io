@@ -1,3 +1,6 @@
 /tmp/
 /venv/
 /assets/main.css
+/assets/main.css.map
+/node_modules/
+/package-lock.json
