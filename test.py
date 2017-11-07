@@ -39,7 +39,7 @@ def ensure_source_connect():
 
 @contextmanager
 def server():
-    print("http.server: localhost:8000")
+    print("http.server: localhost:8000", flush=True)
     os.chdir(Project.discover().get_output_path())
     SimpleHTTPRequestHandler.extensions_map.update(dict([(k, v + ';charset=UTF-8') for k, v in SimpleHTTPRequestHandler.extensions_map.items()]))
     httpd = HTTPServer(('', 8000), SimpleHTTPRequestHandler)
@@ -51,7 +51,7 @@ def server():
 
 @contextmanager
 def get_driver(platform, browser, version, res, device="web"):
-    print("Selenium:", platform, browser, version, res)
+    print("Selenium:", platform, browser, version, res, flush=True)
     if device == "web":
         driver = webdriver.Remote(
             desired_capabilities={
@@ -89,7 +89,7 @@ def get_driver(platform, browser, version, res, device="web"):
     driver.quit()
 
 def tests(driver):
-    print("Testing: http://localhost:8000")
+    print("Testing: http://localhost:8000", flush=True)
     driver.get("http://localhost:8000")
     if not "Tapsafe" in driver.title:
         raise Exception("Unable to load page!")
