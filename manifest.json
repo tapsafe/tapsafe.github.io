@@ -1,5 +1,6 @@
 {
     "name": "Tapsafe",
+    "short_name": "Tapsafe",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -12,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#bdc1ff",
-    "background_color": "#bdc1ff",
+    "theme_color": "#adb1cf",
+    "background_color": "#adb1cf",
     "display": "standalone"
 }
